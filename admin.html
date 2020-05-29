@@ -1,0 +1,29 @@
+<!--HTML for admin page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Admin</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+    <body style="background-color: #fff;">
+        <div class="center">
+            <!--Search booking ref-->
+            <h6 class="input100">Cabs Online <span style="color: #ffcc00;">Admin</span></span></h6>
+            <button id="search-btn" class="input100 border" onClick ="searchBookingRequest('php/searchBookingRequest.php')" type="button">search</button>
+            <input id="search-booking" class="input100 border" type="text" placeholder="Booking number">
+
+            <!--Target div to show search result-->
+            <div id="show-search" style="margin-bottom: 20px;"></div>
+            <!--Target div to show all booking requests with 2 hours-->
+            <div style="margin-bottom: 20px;" id="allBookingRequestWithinTwoHours"></div>
+        </div>
+
+    </body>
+    <!--Load js after body is loaded-->
+    <script type="text/javascript" src="js/xhr.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+</html>

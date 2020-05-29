@@ -1,0 +1,120 @@
+<!--HTML for booking a cab-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cabs Online</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Style links-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+</head>
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<!--Booking form-->
+			<form id="booking-form" class="contact100-form">
+				<span class="contact100-form-title">Book a Cab</span>
+
+				<label class="label-input100" for="first-name">Tell us your name *</label>
+				<div class="wrap-input100 rs1-wrap-input100">
+					<input id="fname" value="" class="input100" type="text" name="input" placeholder="First name">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100">
+					<input id="lname" value="" class="input100" type="text" name="input" placeholder="Last name"> 
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="email">Enter phone number *</label>
+				<div class="wrap-input100">
+					<input id="phone" value="" class="input100" type="text" name="input" placeholder="09-921 9999">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="first-name">Enter pick-up location *</label>
+				<div class="wrap-input100 rs1-wrap-input100" >
+					<input id="unit" value="" name="input" class="input100" type="text" placeholder="Unit number">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100" >
+					<input id="streetNumber" value="" class="input100" type="text" name="input" placeholder="55"> 
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100">
+					<input id="street" value="" class="input100" type="text" name="input" placeholder="Wellesley Street East">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100">
+					<input id="suburb" value="" class="input100" type="text" name="input" placeholder="Auckland">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message">Enter pick-up date *</label>
+				<div class="wrap-input100" >
+					<input id="date" class="input100 date" type="date" name="input" onfocusout="dateHandler(event)">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message">Enter pick-up time *</label>
+				<div class="wrap-input100">
+					<input id="time" class="input100" type="time" name="input" value="13:30">
+					<span class="focus-input100"></span>
+				</div>
+				<div id="errorMessage" class="error"></div>
+				<div class="container-contact100-form-btn">
+					<button id="bookcab-btn" dname="submit" type = "button" class="contact100-form-btn input100" onClick ="getData('php/processBooking.php')" >Book Cab</button>
+				</div>
+			</form>
+			<!--Confirmation message-->
+			<div style="display: none;" id="booking-confirmation" class="contact100-form">
+				<P id="booking-confirmation-text" style="font-size: larger;"></P>
+				<br><br>
+				<span class="lnr lnr-car"></span><a style="text-decoration: none;" href="booking.html"> Book another cab</a>
+			</div>
+			<!--bachground image and contact details-->
+			<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-02.jpg');">
+				<div class="flex-w size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-car"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">Cabs Online</span>
+
+						<span class="txt2">Cabs Online is New Zealand's most trusted and largest taxi group.</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">Lets Talk</span>
+
+						<span class="txt3">+09-921 9999</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">General Support</span>
+
+						<span class="txt3">cabs_online@contact.co.nz</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!--Execute after body is loaded-->	
+<script type="text/javascript" src="js/xhr.js"></script>
+<script type="text/javascript" src="js/processBooking.js"> </script>
+</html>
